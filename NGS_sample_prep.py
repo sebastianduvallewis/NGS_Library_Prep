@@ -177,38 +177,3 @@ def run(protocol: protocol_api.ProtocolContext):
         input_plate.wells()[:num_samples],
         destination_2nd.wells()[:num_samples],
         new_tip='always')
-
-#Finish the edge cases. Such as when average_values is < 4 uL we take all of that as the input. Such as if a user supplies an average value that is 0, we take the other value to be the average value. The shortest cover-up is if there is a zero value for one quant than double it. 
-#If the nm_to_ul is less than < 4, we round up
-# 
-# for average_vales in average_values: 
-#     if nm_to_ul < 1
-#     round(number+0.5)
-
-# import math
-# for average_vales in average_values: 
-#     if nm_to_ul < 1
-#     math.ceil(average_vales)
-
-# # if the average_value is less than 4 then we take that as input and take all of it. Here we skip the dilution buffer 
-
-# for average_values in average_values::
-#     if average_values < 4:
-#          average_values_array = np.array(average_values)
-#          nm_to_ul = (average_values_array)
-#          dilution_buffer_to_add = (elution_buffer-nm_to_ul)
-#          dilution_buffer_to_adds = list(dilution_buffer_to_add)
-#          total_volume_combined = (dilution_buffer_to_adds+nm_to_ul)
-#          average_values_list=list(nm_to_ul)
-#          total_volume=np.array(total_volume_combined)
-
-#          p10.transfer(
-#              average_values_list[:num_samples],
-#              input_plate.wells()[:num_samples],
-#              reaction_plate.wells()[:num_samples],
-#              new_tip='always')
-
-# #PhiX - 3 - Dilute PhiX to 4nM (use the old denatured PhiX prepared last week)
-
-# 2ul of PhiX 10nM with 3ul of 10mM Tris HCl pH8.5 + 0.1% Tween 20
-
